@@ -1,5 +1,3 @@
-// YOU CAN USE THIS FILE AS REFERENCE FOR SERVER DEVELOPMENT
-
 // include the express module
 var express = require("express");
 
