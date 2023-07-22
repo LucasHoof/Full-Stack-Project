@@ -1,0 +1,96 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  style(type='text/css').
+    .navbar {
+    background-color: #563d7c;
+    }
+    .navbar-default .navbar-nav li a{
+    color: #eee;
+    }
+    .navbar-default .navbar-nav li a:hover{
+    color: white;
+    }
+    td input.btn {
+    width: 100%;
+    }
+nav.navbar.navbar-default
+  .container-fluid
+    ul.nav.navbar-nav
+      li
+        a(href='/')
+          b Home
+      li
+        a(href='/schedule')
+          b Schedule
+      li
+        a(href='/addEvent')
+          b Add Event
+      li
+        a(href='/logout')
+          span.glyphicon.glyphicon-log-out(aria-hidden='true')
+br
+br
+br
+.container
+  .row
+    p
+      br
+  .row
+    .col-md-4
+    .col-md-4
+      .panel.panel-default
+
+        form(name='EventForm' method='post' action=`/updateEvent/${record.id}`)
+          table.table.table-bordered.table-hover
+            tbody
+              tr
+                td.col-md-6 Event
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='text' name='event' required='' maxlength='30' value=(record.name || ""))
+              tr
+                td.col-md-6 Day
+                td.col-md-6
+                  .form-group
+                    select.form-control(name='day')
+                      each day in ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+                        option(value=day selected=(record.day === day)) #{day}
+              tr
+                td.col-md-6 Start Time
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='time' name='start' required='' value=(record.start || ""))
+              tr
+                td.col-md-6 End Time
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='time' name='end' required='' value=(record.end || ""))
+              tr
+                td.col-md-6 Phone
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='text' name='phone' required='' maxlength='60' value=(record.phone || ""))
+              tr
+                td.col-md-6 Location
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='text' name='location' required='' maxlength='100' value=(record.location || ""))
+              tr
+                td.col-md-6 Extra Info
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='text' name='info' required='' maxlength='100' value=(record.info || ""))
+              tr
+                td.col-md-6 URL for the Extra Info
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='url' name='url' required='' maxlength='200' value=(record.url || ""))
+              tr
+                td(colspan='2')
+                  input.btn.btn-primary(type='submit' value='Submit')
+    .col-md-4
