@@ -1,11 +1,17 @@
+/*
+TO DO:
+-----
+READ ALL COMMENTS AND REPLACE VALUES ACCORDINGLY
+*/
+
 var mysql = require("mysql");
 
 var con = mysql.createConnection({
-    host: "cse-mysql-classes-01.cse.umn.edu",
-    user: "C4131DF23U40",               // replace with the database user provided to you
-    password: "1650",                  // replace with the database password provided to you
-    database: "C4131DF23U40",           // replace with the database user provided to you
-    port: 3306
+    host: ",
+    user: "",               // replace with the database user provided to you
+    password: "",                  // replace with the database password provided to you
+    database: "",           // replace with the database user provided to you
+    port: 0000
 });
 
 con.connect(function(err) {
