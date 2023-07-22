@@ -7,7 +7,7 @@ READ ALL COMMENTS AND REPLACE VALUES ACCORDINGLY
 var mysql = require("mysql");
 
 var con = mysql.createConnection({
-    host: ",
+    host: "",
     user: "",               // replace with the database user provided to you
     password: "",                  // replace with the database password provided to you
     database: "",           // replace with the database user provided to you
