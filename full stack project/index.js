@@ -35,7 +35,6 @@ const pug = require("pug");
 // Bcrypt library for comparing password hashes
 const bcrypt = require('bcrypt');
 
-// A  library that can help read uploaded file for bonus.
 // var formidable = require('formidable')
 const qs = require('querystring');
 
@@ -44,7 +43,6 @@ const qs = require('querystring');
 app.use(bodyparser());
 
 // use express-session
-// in mremory session is sufficient for this assignment
 app.use(session({
   secret: "csci4131secretkey",
   saveUninitialized: true,
