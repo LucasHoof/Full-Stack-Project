@@ -1,9 +1,3 @@
-/*
-TO DO:
------
-READ ALL COMMENTS AND REPLACE VALUES ACCORDINGLY
-*/
-
 var mysql = require("mysql");
 
 var con = mysql.createConnection({
